@@ -1,0 +1,284 @@
+[
+	{
+		"name": "url",
+		"type": "url",
+		"label": "URL",
+		"required": true,
+		"help": "The complete URL of the website to capture. It must include the protocol (`http://` or `https://`)."
+	},
+	{
+		"name": "format",
+		"type": "select",
+		"label": "Format",
+		"default": "jpeg",
+		"options": [
+			{
+				"label": "JPEG",
+				"value": "jpeg"
+			},
+			{
+				"label": "PNG",
+				"value": "png"
+			},
+			{
+				"label": "WebP",
+				"value": "webp"
+			}
+		],
+		"help": "The image format of the captured screenshot."
+	},
+	{
+		"name": "width",
+		"type": "uinteger",
+		"label": "Width",
+		"validate": {
+			"max": 16350
+		},
+		"help": "The width, in pixels, of the viewport to use. Between 0 and 16350, provided that Width multiplied by Height does not exceed 33177600 pixels. Defaults to 1920."
+	},
+	{
+		"name": "height",
+		"type": "uinteger",
+		"label": "Height",
+		"validate": {
+			"max": 16350
+		},
+		"help": "The height, in pixels, of the viewport to use. Between 0 and 16350, provided that Width multiplied by Height does not exceed 33177600 pixels. Defaults to 1080. Ignored when Full Page is enabled."
+	},
+	{
+		"name": "full_page",
+		"type": "boolean",
+		"label": "Full Page",
+		"required": false,
+		"help": "Capture the entire page of the target website instead of just the viewport."
+	},
+	{
+		"name": "quality",
+		"type": "uinteger",
+		"label": "Quality",
+		"validate": {
+			"min": 0,
+			"max": 100
+		},
+		"help": "The quality of the image, between 0 and 100. Defaults to 80. Only applies to the JPEG and WebP formats."
+	},
+	{
+		"name": "scroll_page",
+		"type": "boolean",
+		"label": "Scroll Page",
+		"required": false,
+		"advanced": true,
+		"help": "Scroll through the entire page before capturing. Useful to trigger animations or lazy loaded elements."
+	},
+	{
+		"name": "element",
+		"type": "text",
+		"label": "Element",
+		"advanced": true,
+		"help": "Capture only the first element matched by this CSS selector. For example `#header`."
+	},
+	{
+		"name": "element_overlap",
+		"type": "boolean",
+		"label": "Element Overlap",
+		"required": false,
+		"advanced": true,
+		"help": "Also capture the elements that overlap the element targeted by the Element field."
+	},
+	{
+		"name": "crop",
+		"type": "text",
+		"label": "Crop",
+		"advanced": true,
+		"help": "Capture an area of the page defined as `left,top,width,height` in pixels. For example `10,20,50,100`."
+	},
+	{
+		"name": "thumbnail_width",
+		"type": "uinteger",
+		"label": "Thumbnail Width",
+		"validate": {
+			"min": 0,
+			"max": 1920
+		},
+		"advanced": true,
+		"help": "The width, in pixels, of the thumbnail to generate. Between 0 and 1920. The aspect ratio is preserved. Ignored when Full Page is enabled."
+	},
+	{
+		"name": "scale_factor",
+		"type": "select",
+		"label": "Scale Factor",
+		"advanced": true,
+		"options": [
+			{
+				"label": "1 (Standard resolution)",
+				"value": 1
+			},
+			{
+				"label": "2 (High definition, for retina displays)",
+				"value": 2
+			}
+		],
+		"help": "The device scale factor to use. Defaults to 1. With the WebP format, Width and Height multiplied by the Scale Factor must not exceed 16350 pixels."
+	},
+	{
+		"name": "transparent",
+		"type": "boolean",
+		"label": "Transparent Background",
+		"required": false,
+		"advanced": true,
+		"help": "Capture with transparency enabled. Only works with the PNG format."
+	},
+	{
+		"name": "wait_until",
+		"type": "select",
+		"label": "Wait Until",
+		"advanced": true,
+		"options": [
+			{
+				"label": "DOM loaded — the initial HTML document has been completely loaded",
+				"value": "dom_loaded"
+			},
+			{
+				"label": "Page loaded — the whole page including dependent resources has loaded",
+				"value": "page_loaded"
+			},
+			{
+				"label": "Network idle — the whole page has loaded and the network is idle",
+				"value": "network_idle"
+			}
+		],
+		"help": "Wait until this criterion is satisfied before considering the page loaded. Defaults to `Network idle`, the most reliable but slowest criterion."
+	},
+	{
+		"name": "wait_until_timeout",
+		"type": "uinteger",
+		"label": "Wait Until Timeout",
+		"validate": {
+			"min": 1,
+			"max": 30
+		},
+		"advanced": true,
+		"help": "The maximum time, in seconds, to wait for the Wait Until criterion. If it is not satisfied within this time, the screenshot is captured anyway with whatever has been loaded so far. Between 1 and 30. Defaults to 30."
+	},
+	{
+		"name": "wait_for",
+		"type": "text",
+		"label": "Wait For",
+		"advanced": true,
+		"help": "Wait until this CSS selector matches an element on the page before capturing. For example `#content`."
+	},
+	{
+		"name": "delay",
+		"type": "uinteger",
+		"label": "Delay",
+		"validate": {
+			"min": 0,
+			"max": 10
+		},
+		"advanced": true,
+		"help": "The delay, in seconds, to wait after the page is loaded before capturing. Between 0 and 10."
+	},
+	{
+		"name": "css",
+		"type": "text",
+		"label": "CSS",
+		"multiline": true,
+		"advanced": true,
+		"help": "CSS to inject into the page before capturing the screenshot."
+	},
+	{
+		"name": "js",
+		"type": "text",
+		"label": "JavaScript",
+		"multiline": true,
+		"advanced": true,
+		"help": "JavaScript to inject into the page before capturing the screenshot."
+	},
+	{
+		"name": "no_ads",
+		"type": "boolean",
+		"label": "No Ads",
+		"required": false,
+		"advanced": true,
+		"help": "Hide ads on the captured page."
+	},
+	{
+		"name": "no_cookie_banners",
+		"type": "boolean",
+		"label": "No Cookie Banners",
+		"required": false,
+		"advanced": true,
+		"help": "Hide cookie consent banners on the captured page."
+	},
+	{
+		"name": "no_tracking",
+		"type": "boolean",
+		"label": "No Tracking",
+		"required": false,
+		"advanced": true,
+		"help": "Block tracking scripts on the captured page."
+	},
+	{
+		"name": "accept_language",
+		"type": "text",
+		"label": "Accept Language",
+		"advanced": true,
+		"help": "Sets the `Accept-Language` header on requests to the target URL, to capture a website in a specific language. For example `en-GB,en;q=0.9`."
+	},
+	{
+		"name": "user_agent",
+		"type": "text",
+		"label": "User Agent",
+		"advanced": true,
+		"help": "Sets the `User-Agent` header, to emulate a particular device."
+	},
+	{
+		"name": "headers",
+		"type": "text",
+		"label": "Headers",
+		"advanced": true,
+		"help": "A semicolon separated list of `name=value` header pairs to send to the target URL. For example `Header1=value1;Header2=value2`."
+	},
+	{
+		"name": "cookies",
+		"type": "text",
+		"label": "Cookies",
+		"advanced": true,
+		"help": "A semicolon separated list of `name=value` cookie pairs to send to the target URL. For example `cookie1=value1;cookie2=value2`."
+	},
+	{
+		"name": "extract_html",
+		"type": "boolean",
+		"label": "Extract HTML",
+		"required": false,
+		"advanced": true,
+		"help": "Extract the HTML of the page alongside the screenshot. Adds an Extracted HTML URL to the output."
+	},
+	{
+		"name": "extract_text",
+		"type": "boolean",
+		"label": "Extract Text",
+		"required": false,
+		"advanced": true,
+		"help": "Extract the text of the page alongside the screenshot. Adds an Extracted Text URL to the output."
+	},
+	{
+		"name": "ttl",
+		"type": "uinteger",
+		"label": "Time to Live",
+		"validate": {
+			"min": 0,
+			"max": 2592000
+		},
+		"advanced": true,
+		"help": "Number of seconds the screenshot is cached, between 0 and 2592000. Defaults to 86400 (one day). Captures with identical parameters are served from the cache and do not count against your monthly quota."
+	},
+	{
+		"name": "fresh",
+		"type": "boolean",
+		"label": "Fresh",
+		"required": false,
+		"advanced": true,
+		"help": "Force a new capture instead of returning a cached screenshot. This always counts against your monthly quota."
+	}
+]

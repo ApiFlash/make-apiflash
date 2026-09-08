@@ -1,0 +1,29 @@
+[
+	{
+		"name": "url",
+		"type": "url",
+		"label": "Screenshot URL"
+	},
+	{
+		"name": "data",
+		"type": "buffer",
+		"label": "Screenshot Data",
+		"semantic": "file:data"
+	},
+	{
+		"name": "fileName",
+		"type": "filename",
+		"label": "File Name",
+		"semantic": "file:name"
+	},
+	{
+		"name": "extractedHtmlUrl",
+		"type": "url",
+		"label": "Extracted HTML URL"
+	},
+	{
+		"name": "extractedTextUrl",
+		"type": "url",
+		"label": "Extracted Text URL"
+	}
+]

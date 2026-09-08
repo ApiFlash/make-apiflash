@@ -1,0 +1,63 @@
+[
+	{
+		"url": "/urltoimage",
+		"method": "GET",
+		"timeout": 120000,
+		"qs": {
+			"access_key": "{{connection.apiKey}}",
+			"response_type": "json",
+			"url": "{{parameters.url}}",
+			"format": "{{parameters.format}}",
+			"width": "{{parameters.width}}",
+			"height": "{{parameters.height}}",
+			"full_page": "{{parameters.full_page}}",
+			"scroll_page": "{{parameters.scroll_page}}",
+			"element": "{{parameters.element}}",
+			"element_overlap": "{{parameters.element_overlap}}",
+			"crop": "{{parameters.crop}}",
+			"thumbnail_width": "{{parameters.thumbnail_width}}",
+			"scale_factor": "{{parameters.scale_factor}}",
+			"quality": "{{parameters.quality}}",
+			"transparent": "{{parameters.transparent}}",
+			"wait_until": "{{parameters.wait_until}}",
+			"wait_until_timeout": "{{parameters.wait_until_timeout}}",
+			"wait_for": "{{parameters.wait_for}}",
+			"delay": "{{parameters.delay}}",
+			"css": "{{parameters.css}}",
+			"js": "{{parameters.js}}",
+			"no_ads": "{{parameters.no_ads}}",
+			"no_cookie_banners": "{{parameters.no_cookie_banners}}",
+			"no_tracking": "{{parameters.no_tracking}}",
+			"accept_language": "{{parameters.accept_language}}",
+			"user_agent": "{{parameters.user_agent}}",
+			"headers": "{{parameters.headers}}",
+			"cookies": "{{parameters.cookies}}",
+			"extract_html": "{{parameters.extract_html}}",
+			"extract_text": "{{parameters.extract_text}}",
+			"ttl": "{{parameters.ttl}}",
+			"fresh": "{{parameters.fresh}}"
+		},
+		"response": {
+			"temp": {
+				"url": "{{body.url}}",
+				"extractedHtmlUrl": "{{body.extracted_html}}",
+				"extractedTextUrl": "{{body.extracted_text}}"
+			}
+		}
+	},
+	{
+		"url": "{{temp.url}}",
+		"method": "GET",
+		"timeout": 120000,
+		"response": {
+			"type": "binary",
+			"output": {
+				"url": "{{temp.url}}",
+				"data": "{{body}}",
+				"fileName": "screenshot.{{ifempty(parameters.format, 'jpeg')}}",
+				"extractedHtmlUrl": "{{temp.extractedHtmlUrl}}",
+				"extractedTextUrl": "{{temp.extractedTextUrl}}"
+			}
+		}
+	}
+]

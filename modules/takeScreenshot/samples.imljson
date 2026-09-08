@@ -1,0 +1,7 @@
+{
+	"url": "https://api.apiflash.com/v1/urltoimage/cache/3kZ9Xq.jpeg?access_key=abc123",
+	"data": "IMAGE_BINARY_DATA",
+	"fileName": "screenshot.jpeg",
+	"extractedHtmlUrl": "https://api.apiflash.com/v1/urltoimage/cache/3kZ9Xq.html?access_key=abc123",
+	"extractedTextUrl": "https://api.apiflash.com/v1/urltoimage/cache/3kZ9Xq.txt?access_key=abc123"
+}

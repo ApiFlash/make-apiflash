@@ -1,0 +1,18 @@
+{
+	"url": "https://api.apiflash.com/v1/urltoimage/quota",
+	"method": "GET",
+	"qs": {
+		"access_key": "{{parameters.apiKey}}"
+	},
+	"log": {
+		"sanitize": [
+			"request.qs.access_key"
+		]
+	},
+	"response": {
+		"error": {
+			"type": "InvalidAccessTokenError",
+			"message": "[{{statusCode}}] {{body}}"
+		}
+	}
+}

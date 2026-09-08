@@ -1,0 +1,9 @@
+[
+	{
+		"name": "apiKey",
+		"type": "password",
+		"label": "Access Key",
+		"required": true,
+		"help": "Your ApiFlash access key. You can find it in the [ApiFlash dashboard](https://apiflash.com/dashboard/access_keys)."
+	}
+]

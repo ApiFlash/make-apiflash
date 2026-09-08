@@ -1,0 +1,8 @@
+[
+    {
+        "label": "Screenshots",
+        "modules": [
+            "takeScreenshot"
+        ]
+    }
+]

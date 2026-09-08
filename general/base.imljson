@@ -1,0 +1,30 @@
+{
+	"baseUrl": "https://api.apiflash.com/v1",
+	"log": {
+		"sanitize": [
+			"request.qs.access_key"
+		]
+	},
+	"response": {
+		"error": {
+			"type": "RuntimeError",
+			"message": "[{{statusCode}}] {{ifempty(body.error_message, body)}}",
+			"401": {
+				"type": "InvalidAccessTokenError",
+				"message": "{{body}}"
+			},
+			"402": {
+				"type": "RuntimeError",
+				"message": "[402] {{ifempty(body.error_message, body)}} Upgrade your plan or wait for your quota to reset at https://apiflash.com/dashboard/subscription."
+			},
+			"403": {
+				"type": "RuntimeError",
+				"message": "[403] {{ifempty(body.error_message, body)}}"
+			},
+			"429": {
+				"type": "RuntimeError",
+				"message": "[429] {{ifempty(body.error_message, body)}} ApiFlash blocks captures that keep failing with the exact same parameters for one hour, so retrying immediately will not help."
+			}
+		}
+	}
+}

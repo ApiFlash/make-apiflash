@@ -1,0 +1,54 @@
+{
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.imljson",
+        "common": "general/common.json",
+        "readme": "README.md",
+        "groups": "general/groups.json"
+    },
+    "components": {
+        "connection": {
+            "apiflash": {
+                "label": "ApiFlash",
+                "connectionType": "basic",
+                "codeFiles": {
+                    "communication": "connections/apiflash/communication.imljson",
+                    "params": "connections/apiflash/params.imljson",
+                    "common": "connections/apiflash/common.json"
+                }
+            }
+        },
+        "endpoint": {},
+        "webhook": {},
+        "module": {
+            "takeScreenshot": {
+                "label": "Take a Screenshot",
+                "description": "Captures a screenshot of a website.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "apiflash",
+                "altConnection": null,
+                "webhook": null,
+                "codeFiles": {
+                    "communication": "modules/takeScreenshot/communication.imljson",
+                    "staticParams": "modules/takeScreenshot/static-params.imljson",
+                    "mappableParams": "modules/takeScreenshot/mappable-params.imljson",
+                    "interface": "modules/takeScreenshot/interface.imljson",
+                    "samples": "modules/takeScreenshot/samples.imljson",
+                    "scope": "modules/takeScreenshot/scope.imljson"
+                }
+            }
+        },
+        "rpc": {},
+        "function": {}
+    },
+    "origins": [
+        {
+            "label": "ApiFlash app on Make",
+            "baseUrl": "https://eu1.make.com/api",
+            "appId": "apiflash",
+            "appVersion": 1,
+            "apikeyFile": ".secrets/apikey"
+        }
+    ]
+}
