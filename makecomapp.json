@@ -46,9 +46,27 @@
         {
             "label": "ApiFlash app on Make",
             "baseUrl": "https://eu1.make.com/api",
-            "appId": "apiflash",
+            "appId": "apiflash-lidjkz",
             "appVersion": 1,
-            "apikeyFile": ".secrets/apikey"
+            "apikeyFile": ".secrets/apikey",
+            "idMapping": {
+                "connection": [
+                    {
+                        "local": "apiflash",
+                        "remote": "apiflash-lidjkz"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "takeScreenshot",
+                        "remote": "takeScreenshot"
+                    }
+                ],
+                "function": [],
+                "rpc": [],
+                "webhook": [],
+                "endpoint": []
+            }
         }
     ]
 }
