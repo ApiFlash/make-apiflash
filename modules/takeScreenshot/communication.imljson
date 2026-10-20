@@ -4,7 +4,6 @@
 		"method": "GET",
 		"timeout": 120000,
 		"qs": {
-			"access_key": "{{connection.apiKey}}",
 			"response_type": "json",
 			"url": "{{parameters.url}}",
 			"format": "{{parameters.format}}",
@@ -46,11 +45,14 @@
 		}
 	},
 	{
-		"url": "{{temp.url}}",
+		"url": "{{first(split(temp.url, '?'))}}",
 		"method": "GET",
 		"timeout": 120000,
 		"response": {
-			"type": "binary",
+			"type": {
+				"200": "binary",
+				"*": "automatic"
+			},
 			"output": {
 				"url": "{{temp.url}}",
 				"data": "{{body}}",

@@ -1,5 +1,8 @@
 {
 	"baseUrl": "https://api.apiflash.com/v1",
+	"qs": {
+		"access_key": "{{connection.apiKey}}"
+	},
 	"log": {
 		"sanitize": [
 			"request.qs.access_key"
@@ -11,7 +14,7 @@
 			"message": "[{{statusCode}}] {{ifempty(body.error_message, body)}}",
 			"401": {
 				"type": "InvalidAccessTokenError",
-				"message": "{{body}}"
+				"message": "[{{statusCode}}] {{ifempty(body.error_message, body)}}"
 			},
 			"402": {
 				"type": "RuntimeError",

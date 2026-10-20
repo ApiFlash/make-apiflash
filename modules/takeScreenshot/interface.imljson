@@ -7,13 +7,13 @@
 	{
 		"name": "data",
 		"type": "buffer",
-		"label": "Screenshot Data",
+		"label": "Screenshot data",
 		"semantic": "file:data"
 	},
 	{
 		"name": "fileName",
 		"type": "filename",
-		"label": "File Name",
+		"label": "File name",
 		"semantic": "file:name"
 	},
 	{
@@ -24,6 +24,6 @@
 	{
 		"name": "extractedTextUrl",
 		"type": "url",
-		"label": "Extracted Text URL"
+		"label": "Extracted text URL"
 	}
 ]

@@ -43,12 +43,12 @@
 		"validate": {
 			"max": 16350
 		},
-		"help": "The height, in pixels, of the viewport to use. Between 0 and 16350, provided that Width multiplied by Height does not exceed 33177600 pixels. Defaults to 1080. Ignored when Full Page is enabled."
+		"help": "The height, in pixels, of the viewport to use. Between 0 and 16350, provided that Width multiplied by Height does not exceed 33177600 pixels. Defaults to 1080. Ignored when Full page is enabled."
 	},
 	{
 		"name": "full_page",
 		"type": "boolean",
-		"label": "Full Page",
+		"label": "Full page",
 		"required": false,
 		"help": "Capture the entire page of the target website instead of just the viewport."
 	},
@@ -65,7 +65,7 @@
 	{
 		"name": "scroll_page",
 		"type": "boolean",
-		"label": "Scroll Page",
+		"label": "Scroll page",
 		"required": false,
 		"advanced": true,
 		"help": "Scroll through the entire page before capturing. Useful to trigger animations or lazy loaded elements."
@@ -80,7 +80,7 @@
 	{
 		"name": "element_overlap",
 		"type": "boolean",
-		"label": "Element Overlap",
+		"label": "Element overlap",
 		"required": false,
 		"advanced": true,
 		"help": "Also capture the elements that overlap the element targeted by the Element field."
@@ -95,18 +95,18 @@
 	{
 		"name": "thumbnail_width",
 		"type": "uinteger",
-		"label": "Thumbnail Width",
+		"label": "Thumbnail width",
 		"validate": {
 			"min": 0,
 			"max": 1920
 		},
 		"advanced": true,
-		"help": "The width, in pixels, of the thumbnail to generate. Between 0 and 1920. The aspect ratio is preserved. Ignored when Full Page is enabled."
+		"help": "The width, in pixels, of the thumbnail to generate. Between 0 and 1920. The aspect ratio is preserved. Ignored when Full page is enabled."
 	},
 	{
 		"name": "scale_factor",
 		"type": "select",
-		"label": "Scale Factor",
+		"label": "Scale factor",
 		"advanced": true,
 		"options": [
 			{
@@ -118,12 +118,12 @@
 				"value": 2
 			}
 		],
-		"help": "The device scale factor to use. Defaults to 1. With the WebP format, Width and Height multiplied by the Scale Factor must not exceed 16350 pixels."
+		"help": "The device scale factor to use. Defaults to 1. With the WebP format, Width and Height multiplied by the Scale factor must not exceed 16350 pixels."
 	},
 	{
 		"name": "transparent",
 		"type": "boolean",
-		"label": "Transparent Background",
+		"label": "Transparent background",
 		"required": false,
 		"advanced": true,
 		"help": "Capture with transparency enabled. Only works with the PNG format."
@@ -131,7 +131,7 @@
 	{
 		"name": "wait_until",
 		"type": "select",
-		"label": "Wait Until",
+		"label": "Wait until",
 		"advanced": true,
 		"options": [
 			{
@@ -152,18 +152,18 @@
 	{
 		"name": "wait_until_timeout",
 		"type": "uinteger",
-		"label": "Wait Until Timeout",
+		"label": "Wait until timeout",
 		"validate": {
 			"min": 1,
 			"max": 30
 		},
 		"advanced": true,
-		"help": "The maximum time, in seconds, to wait for the Wait Until criterion. If it is not satisfied within this time, the screenshot is captured anyway with whatever has been loaded so far. Between 1 and 30. Defaults to 30."
+		"help": "The maximum time, in seconds, to wait for the Wait until criterion. If it is not satisfied within this time, the screenshot is captured anyway with whatever has been loaded so far. Between 1 and 30. Defaults to 30."
 	},
 	{
 		"name": "wait_for",
 		"type": "text",
-		"label": "Wait For",
+		"label": "Wait for",
 		"advanced": true,
 		"help": "Wait until this CSS selector matches an element on the page before capturing. For example `#content`."
 	},
@@ -197,7 +197,7 @@
 	{
 		"name": "no_ads",
 		"type": "boolean",
-		"label": "No Ads",
+		"label": "No ads",
 		"required": false,
 		"advanced": true,
 		"help": "Hide ads on the captured page."
@@ -205,7 +205,7 @@
 	{
 		"name": "no_cookie_banners",
 		"type": "boolean",
-		"label": "No Cookie Banners",
+		"label": "No cookie banners",
 		"required": false,
 		"advanced": true,
 		"help": "Hide cookie consent banners on the captured page."
@@ -213,7 +213,7 @@
 	{
 		"name": "no_tracking",
 		"type": "boolean",
-		"label": "No Tracking",
+		"label": "No tracking",
 		"required": false,
 		"advanced": true,
 		"help": "Block tracking scripts on the captured page."
@@ -221,14 +221,14 @@
 	{
 		"name": "accept_language",
 		"type": "text",
-		"label": "Accept Language",
+		"label": "Accept language",
 		"advanced": true,
 		"help": "Sets the `Accept-Language` header on requests to the target URL, to capture a website in a specific language. For example `en-GB,en;q=0.9`."
 	},
 	{
 		"name": "user_agent",
 		"type": "text",
-		"label": "User Agent",
+		"label": "User agent",
 		"advanced": true,
 		"help": "Sets the `User-Agent` header, to emulate a particular device."
 	},
@@ -257,15 +257,15 @@
 	{
 		"name": "extract_text",
 		"type": "boolean",
-		"label": "Extract Text",
+		"label": "Extract text",
 		"required": false,
 		"advanced": true,
-		"help": "Extract the text of the page alongside the screenshot. Adds an Extracted Text URL to the output."
+		"help": "Extract the text of the page alongside the screenshot. Adds an Extracted text URL to the output."
 	},
 	{
 		"name": "ttl",
 		"type": "uinteger",
-		"label": "Time to Live",
+		"label": "Time to live",
 		"validate": {
 			"min": 0,
 			"max": 2592000

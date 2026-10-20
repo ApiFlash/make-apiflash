@@ -22,7 +22,7 @@
         "webhook": {},
         "module": {
             "takeScreenshot": {
-                "label": "Take a Screenshot",
+                "label": "Take a screenshot",
                 "description": "Captures a screenshot of a website.",
                 "moduleType": "action",
                 "actionCrud": "create",
@@ -39,7 +39,7 @@
                 }
             },
             "makeApiCall": {
-                "label": "Make an API Call",
+                "label": "Make an API call",
                 "description": "Performs an arbitrary authorized API call.",
                 "moduleType": "universal",
                 "actionCrud": null,

@@ -12,7 +12,7 @@
 	"response": {
 		"error": {
 			"type": "InvalidAccessTokenError",
-			"message": "[{{statusCode}}] {{body}}"
+			"message": "[{{statusCode}}] {{ifempty(body.error_message, body)}}"
 		}
 	}
 }

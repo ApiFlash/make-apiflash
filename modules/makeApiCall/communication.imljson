@@ -5,8 +5,7 @@
 		"{{...}}": "{{toCollection(parameters.headers, 'key', 'value')}}"
 	},
 	"qs": {
-		"{{...}}": "{{toCollection(parameters.qs, 'key', 'value')}}",
-		"access_key": "{{connection.apiKey}}"
+		"{{...}}": "{{toCollection(parameters.qs, 'key', 'value')}}"
 	},
 	"timeout": 120000,
 	"response": {
