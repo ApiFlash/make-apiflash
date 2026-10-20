@@ -2,7 +2,8 @@
     {
         "label": "Screenshots",
         "modules": [
-            "takeScreenshot"
+            "takeScreenshot",
+            "makeApiCall"
         ]
     }
 ]

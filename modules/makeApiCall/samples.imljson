@@ -1,0 +1,11 @@
+{
+	"body": {
+		"limit": 100,
+		"remaining": 97,
+		"reset": 1792540800
+	},
+	"headers": {
+		"content-type": "application/json"
+	},
+	"statusCode": 200
+}

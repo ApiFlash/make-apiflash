@@ -1,0 +1,19 @@
+{
+	"url": "https://api.apiflash.com/{{parameters.url}}",
+	"method": "{{parameters.method}}",
+	"headers": {
+		"{{...}}": "{{toCollection(parameters.headers, 'key', 'value')}}"
+	},
+	"qs": {
+		"{{...}}": "{{toCollection(parameters.qs, 'key', 'value')}}",
+		"access_key": "{{connection.apiKey}}"
+	},
+	"timeout": 120000,
+	"response": {
+		"output": {
+			"headers": "{{headers}}",
+			"statusCode": "{{statusCode}}",
+			"body": "{{body}}"
+		}
+	}
+}

@@ -37,6 +37,23 @@
                     "samples": "modules/takeScreenshot/samples.imljson",
                     "scope": "modules/takeScreenshot/scope.imljson"
                 }
+            },
+            "makeApiCall": {
+                "label": "Make an API Call",
+                "description": "Performs an arbitrary authorized API call.",
+                "moduleType": "universal",
+                "actionCrud": null,
+                "connection": "apiflash",
+                "altConnection": null,
+                "webhook": null,
+                "codeFiles": {
+                    "communication": "modules/makeApiCall/communication.imljson",
+                    "staticParams": "modules/makeApiCall/static-params.imljson",
+                    "mappableParams": "modules/makeApiCall/mappable-params.imljson",
+                    "interface": "modules/makeApiCall/interface.imljson",
+                    "samples": "modules/makeApiCall/samples.imljson",
+                    "scope": "modules/makeApiCall/scope.imljson"
+                }
             }
         },
         "rpc": {},
@@ -60,6 +77,10 @@
                     {
                         "local": "takeScreenshot",
                         "remote": "takeScreenshot"
+                    },
+                    {
+                        "local": "makeApiCall",
+                        "remote": "makeApiCall"
                     }
                 ],
                 "function": [],
